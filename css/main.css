@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Vidaloka|Roboto+Slab');
+
+*{
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+   background-image: url('../img/pattern.png');
+}
+
+a {
+   color: blue;
+  text-decoration: none;
+}
+
+.weather_cont {
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+   position: relative;
+   width : 500px;
+   height : 450px;
+   background: #0074D9;
+   text-align: center;
+   margin: 30px auto;
+   border: 2px solid black;
+   border-radius: 15px;
+   -webkit-box-shadow: 0px 0px 8px black;
+           box-shadow: 0px 0px 8px black;
+   -webkit-transition: -webkit-box-shadow .3s linear;
+   transition: -webkit-box-shadow .3s linear;
+   -o-transition: box-shadow .3s linear;
+   transition: box-shadow .3s linear;
+   transition: box-shadow .3s linear, -webkit-box-shadow .3s linear;
+   font-family: 'Roboto Slab', serif;
+}
+
+.weather_cont:hover{
+   -webkit-box-shadow: 0px 0px 20px black;
+           box-shadow: 0px 0px 20px black;
+}
+
+.weather_location_wrap {
+   background: #0074D9;
+   display: inline-block;
+   text-align: center;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-50%,-50%);
+       -ms-transform: translate(-50%,-50%);
+           transform: translate(-50%,-50%);
+   -webkit-transition: top .5s;
+   -o-transition: top .5s;
+   transition: top .5s;
+}
+
+.weather_btns {
+   -webkit-user-select: none;
+      -moz-user-select: none;
+       -ms-user-select: none;
+           user-select: none;
+   width: 100px;
+   margin: 10px;
+   padding: 7px;
+   cursor: pointer;
+   background: #0d8eff;
+   border: 2px solid black;
+   display: inline-block;
+   border-radius: 10px;
+   color: white;
+   -webkit-transition: all .5s;
+   -o-transition: all .5s;
+   transition: all .5s;
+}
+
+.weather_btns:hover {
+   background: #7fd4ec;
+}
+
+
+.weather_search {
+   text-align: center;
+   font-size: 1.5em;
+   border-radius: 8px;
+}
+
+.quotes_wrap {
+   font-family: 'Vidaloka', serif;
+   position: absolute;
+   bottom: 3%;
+   width: 90%;
+   color: #cceef7;
+   left: 50%;
+   -webkit-transform: translateX(-50%);
+       -ms-transform: translateX(-50%);
+           transform: translateX(-50%);
+   padding: 5px;
+   padding-bottom: 0px;
+   opacity: 0;
+   -webkit-transition: opacity 1s;
+   -o-transition: opacity 1s;
+   transition: opacity 1s;
+}
+.quotes_wrap a {
+   font-size: 1.1em;
+   color: white;
+}
+
+.quotes_wrap p:first-of-type{
+   font-style: italic;
+   text-align: left;
+}
+
+.quotes_wrap p:last-of-type{
+   text-align: right;
+   text-decoration: none;
+}
+
+.weather_display_wrap {
+   opacity: 0;
+   width: 440px;
+   padding: 5px;
+   height: auto;
+   position: relative;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-50%,-50%);
+       -ms-transform: translate(-50%,-50%);
+           transform: translate(-50%,-50%);
+   -webkit-box-shadow: 0px 0px 12px white;
+           box-shadow: 0px 0px 12px white;
+   -webkit-transition: opacity .5s;
+   -o-transition: opacity .5s;
+   transition: opacity .5s;
+   text-align: center;
+   background: #0d8eff;
+}
+
+
+.city_icon {
+   position: relative;
+   display: inline-block;
+   width: 100px;
+   height: 120px;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+   vertical-align:top;
+   top: 50%;
+
+}
+.city_icon img {
+-webkit-transform: scale(1.5,1.5);
+    -ms-transform: scale(1.5,1.5);
+        transform: scale(1.5,1.5);
+
+}
+
+.city_main {
+   position: relative;
+   display: inline-block;
+   width: 160px;
+   height: 120px;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+   vertical-align:top;
+   margin: 0px 10px;
+}
+
+.city_main p:first-of-type {
+   font-size: 1.8em;
+   font-weight: bold;
+}
+
+.city_main a:first-of-type {
+   font-size: 1.4em;
+   font-weight: bold;
+   color: white;
+   border-bottom: 2px solid transparent;
+   -webkit-transition: all 1s;
+   -o-transition: all 1s;
+   transition: all 1s;
+}
+
+.city_main a:first-of-type:hover{
+   border-bottom: 2px solid white;
+}
+
+.wind {
+   text-align: center;
+   display: inline-block;
+   width: 100px;
+   height: 120px;
+   position: relative;
+   vertical-align:top;
+}
+
+.city_wind {
+   cursor: pointer;
+   margin: auto;
+   position: absolute;
+   top: 0; left: 0; bottom: 0; right: 0;
+   width: 40px;
+   height: 40px;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+   -webkit-transition: all 1s;
+   -o-transition: all 1s;
+   transition: all 1s;
+   z-index: 100;
+
+}
+
+.city_wind:hover{
+   -webkit-transform: rotate(360deg) !important;
+       -ms-transform: rotate(360deg) !important;
+           transform: rotate(360deg) !important;
+}
+
+.city_wind_arrow {
+   position: absolute;
+   height: 50%;
+   width:2px;
+   background: black;
+   left: 50%;
+}
+
+.city_wind_arrow i {
+   position: absolute;
+   top: 2px;
+   border: solid black;
+   border-width: 2px 2px 0 0;
+   display: inline-block;
+   padding: 3px;
+   -webkit-transform-origin: center;
+       -ms-transform-origin: center;
+           transform-origin: center;
+   -webkit-transform: translate(-50%,-50%) rotate(-45deg);
+       -ms-transform: translate(-50%,-50%) rotate(-45deg);
+           transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.deg_cont {
+   margin: auto;
+   position: absolute;
+   top: 0; left: 0; bottom: 0; right: 0;
+   width: 80px;
+   height: 80px;
+   border: 1px solid black;
+   border-radius: 50%;
+}
+
+.deg_n {
+   font-size: smaller;
+   position: absolute;
+   left: 50%;
+   -webkit-transform: translate(-50%,0%);
+       -ms-transform: translate(-50%,0%);
+           transform: translate(-50%,0%);
+}
+
+.deg_w {
+   font-size: smaller;
+   position: absolute;
+   top: 50%;
+   -webkit-transform: translate(0%,-50%);
+       -ms-transform: translate(0%,-50%);
+           transform: translate(0%,-50%);
+}
+
+.deg_s {
+   font-size: smaller;
+   position: absolute;
+   left: 50%;
+   top:100%;
+   -webkit-transform: translate(-50%,-100%);
+       -ms-transform: translate(-50%,-100%);
+           transform: translate(-50%,-100%);
+}
+
+.deg_e {
+   font-size: smaller;
+   position: absolute;
+   top: 50%;
+   left: 100%;
+   -webkit-transform: translate(-100%,-50%);
+       -ms-transform: translate(-100%,-50%);
+           transform: translate(-100%,-50%);
+}
+
+.wind_label {
+   position: absolute;
+   top: -2px;
+   left: 0px;
+   right: 0px;
+}
+
+.wind_speed {
+   position: absolute;
+   left: 0px;
+   right: 0px;
+   bottom: -2px;
+}
