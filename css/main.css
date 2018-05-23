@@ -19,25 +19,23 @@ a {
            box-sizing: border-box;
    position: relative;
    width : 500px;
-   height : 450px;
+   height : 180px;
    background: #0074D9;
    text-align: center;
    margin: 30px auto;
-   border: 2px solid black;
-   border-radius: 15px;
+   border: 1px solid black;
+   border-radius: 8px;
    -webkit-box-shadow: 0px 0px 8px black;
            box-shadow: 0px 0px 8px black;
-   -webkit-transition: -webkit-box-shadow .3s linear;
-   transition: -webkit-box-shadow .3s linear;
-   -o-transition: box-shadow .3s linear;
-   transition: box-shadow .3s linear;
-   transition: box-shadow .3s linear, -webkit-box-shadow .3s linear;
+   -webkit-transition: -webkit-box-shadow .5s linear;
+   -o-transition: box-shadow .5s linear;
+   transition: box-shadow .3s linear, height .5s;
    font-family: 'Roboto Slab', serif;
 }
 
 .weather_cont:hover{
-   -webkit-box-shadow: 0px 0px 20px black;
-           box-shadow: 0px 0px 20px black;
+   -webkit-box-shadow: 0px 0px 20px #001f3f;
+           box-shadow: 0px 0px 20px #001f3f;
 }
 
 .weather_location_wrap {
@@ -65,9 +63,8 @@ a {
    padding: 7px;
    cursor: pointer;
    background: #0d8eff;
-   border: 2px solid black;
+   border: 1px solid black;
    display: inline-block;
-   border-radius: 10px;
    color: white;
    -webkit-transition: all .5s;
    -o-transition: all .5s;
@@ -98,9 +95,9 @@ a {
    padding: 5px;
    padding-bottom: 0px;
    opacity: 0;
-   -webkit-transition: opacity 1s;
-   -o-transition: opacity 1s;
-   transition: opacity 1s;
+   -webkit-transition: opacity 2s;
+   -o-transition: opacity 2s;
+   transition: opacity 2s;
 }
 .quotes_wrap a {
    font-size: 1.1em;
@@ -119,6 +116,7 @@ a {
 
 .weather_display_wrap {
    opacity: 0;
+   border-radius: 15px;
    width: 440px;
    padding: 5px;
    height: auto;
@@ -128,11 +126,11 @@ a {
    -webkit-transform: translate(-50%,-50%);
        -ms-transform: translate(-50%,-50%);
            transform: translate(-50%,-50%);
-   -webkit-box-shadow: 0px 0px 12px white;
-           box-shadow: 0px 0px 12px white;
-   -webkit-transition: opacity .5s;
-   -o-transition: opacity .5s;
-   transition: opacity .5s;
+   -webkit-box-shadow: 0px 0px 12px #001f3f;
+           box-shadow: 0px 0px 12px #001f3f;
+   -webkit-transition: opacity 2s;
+   -o-transition: opacity 2s;
+   transition: opacity 2s;
    text-align: center;
    background: #0d8eff;
 }
@@ -150,9 +148,9 @@ a {
 
 }
 .city_icon img {
--webkit-transform: scale(1.5,1.5);
-    -ms-transform: scale(1.5,1.5);
-        transform: scale(1.5,1.5);
+-webkit-transform: scale(1.7,1.7);
+    -ms-transform: scale(1.7,1.7);
+        transform: scale(1.7,1.7);
 
 }
 

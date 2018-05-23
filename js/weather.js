@@ -17,6 +17,7 @@ Weather.prototype.searchByLocation = function(lat, lon) {
 };
 
 Weather.prototype.hideSearch = function() {
+   this.myCont.style.height = "440px";
    var wWrapHeight = parseInt(window.getComputedStyle(this.wWrap).height) / 4;
    var contTop = parseInt(this.myCont.offsetTop);
    this.wWrap.style.top = wWrapHeight + 40 + "px";
