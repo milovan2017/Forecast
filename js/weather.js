@@ -36,7 +36,6 @@ Weather.prototype.getCurrentWeather = function(url) {
       if (xml.status === 200 && xml.readyState === 4) {
          var responseText = xml.responseText;
          self.weatherJSON = JSON.parse(responseText);
-         console.log(self.weatherJSON); //
          self.hideSearch();
          self.display();
       } else if (xml.status != 200) {
